@@ -7,8 +7,8 @@ import 'package:responsive_http_clone/widget/res_footer_widget.dart';
 import 'package:responsive_http_clone/widget/sub_menu_box_widget.dart';
 import 'package:responsive_http_clone/widget/res_header_widget.dart';
 
-class MobileScreen extends StatelessWidget {
-  const MobileScreen({Key? key}) : super(key: key);
+class TabletScreen extends StatelessWidget {
+  const TabletScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,103 +20,99 @@ class MobileScreen extends StatelessWidget {
           WebHeader(
             width: resWidth,
           ),
-          MobileBannerImageWidget(
+          BannerImageWidget(
               image:
-                  'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWKCAD?ver=7119&q=0&m=8&h=431&w=767&b=%23FFFFFFFF&l=f&x=1016&y=255&s=1979&d=1112&aim=true',
+                  'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWUuNl?ver=8047&q=0&m=8&h=609&w=1083&b=%23FFFFFFFF&l=f&x=109&y=95&s=2653&d=1492&aim=true',
               multibanner: true,
               title: 'Microsoft 365',
               dialog:
-                  '하나의 편리한 구독으로 프리미엄 Office 앱, 추가 클라우드 저장소, 고급 보안 등을 얻을 수 있습니다.',
+                  '하나의 편리한 구독으로 프리미엄 Office 앱, 추가\n클라우드 저장소, 고급 보안 등을 얻을 수 있습니다.',
               width: resWidth,
               buttonText: '지금 쇼핑하기 '),
           SizedBox(
             height: 48,
           ),
-          Container(
-            width: resWidth * 0.9,
-            // width: resWidth,
-            child: Column(children: [
-              Container(
-                height: 48,
-                child: Row(
-                  children: [
-                    Image.network(
-                      'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4sQDc?ver=30c2&q=90&m=6&h=40&w=40&b=%23FFFFFFFF&l=f&o=t&aim=true',
-                      width: 20,
-                      height: 20,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      '내게 맞는 Microsof 365 선택하기',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
-                    )
-                  ],
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Container(
+              // width: resWidth,
+              height: 149,
+              child:
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                Container(
+                  alignment: Alignment.center,
+                  width: 184,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.network(
+                        'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4sQDc?ver=30c2&q=90&m=6&h=40&w=40&b=%23FFFFFFFF&l=f&o=t&aim=true',
+                        width: 40,
+                        height: 40,
+                      ),
+                      Text(
+                        '내게 맞는\nMicrosof 365 선\n택하기',
+                        textAlign: TextAlign.center,
+                      )
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                height: 48,
-                child: Row(
-                  children: [
-                    Image.network(
-                      'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4pndL?ver=5217&q=90&m=6&h=40&w=40&b=%23FFFFFFFF&l=f&o=t&aim=true',
-                      width: 20,
-                      height: 20,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'Surface 디바이스 쇼핑하기',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
-                    )
-                  ],
+                Container(
+                  alignment: Alignment.center,
+                  width: 184,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.network(
+                        'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4pndL?ver=5217&q=90&m=6&h=40&w=40&b=%23FFFFFFFF&l=f&o=t&aim=true',
+                        width: 40,
+                        height: 40,
+                      ),
+                      Text(
+                        'Surface 디바이스\n쇼핑하기\n',
+                        textAlign: TextAlign.center,
+                      )
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                height: 48,
-                child: Row(
-                  children: [
-                    Image.network(
-                      'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWWl29?ver=addd&q=90&m=6&h=40&w=40&b=%23FFFFFFFF&l=f&o=t&aim=true',
-                      width: 20,
-                      height: 20,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'Xbox 쇼핑',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
-                    )
-                  ],
+                Container(
+                  alignment: Alignment.center,
+                  width: 184,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.network(
+                        'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWWl29?ver=addd&q=90&m=6&h=40&w=40&b=%23FFFFFFFF&l=f&o=t&aim=true',
+                        width: 40,
+                        height: 40,
+                      ),
+                      Text(
+                        'Xbox 쇼핑\n\n',
+                        textAlign: TextAlign.center,
+                      )
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                height: 48,
-                child: Row(
-                  children: [
-                    Image.network(
-                      'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4sQDc?ver=30c2&q=90&m=6&h=40&w=40&b=%23FFFFFFFF&l=f&o=t&aim=true',
-                      width: 20,
-                      height: 20,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'Windows 11 받기',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
-                    )
-                  ],
+                Container(
+                  alignment: Alignment.center,
+                  width: 184,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.network(
+                        'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4sQDc?ver=30c2&q=90&m=6&h=40&w=40&b=%23FFFFFFFF&l=f&o=t&aim=true',
+                        width: 40,
+                        height: 40,
+                      ),
+                      Text(
+                        'Windows 11 받기\n\n',
+                        textAlign: TextAlign.center,
+                      )
+                    ],
+                  ),
                 ),
-              ),
-            ]),
+              ]),
+            ),
           ),
           SizedBox(
             height: 40,
@@ -185,14 +181,14 @@ class MobileScreen extends StatelessWidget {
           SizedBox(
             height: 72,
           ),
-          MobileBannerImageWidget(
+          BannerImageWidget(
               image:
-                  'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4RBHW?ver=a523&q=0&m=8&h=431&w=767&b=%23FFFFFFFF&l=f&x=1131&y=919&s=767&d=431&aim=true',
+                  'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4RBHW?ver=a523&q=0&m=8&h=609&w=1083&b=%23FFFFFFFF&l=f&x=0&y=735&s=1094&d=615&aim=true',
               multibanner: false,
               width: resWidth,
               title: 'PC Game Pass',
               dialog:
-                  '100개 이상의 멋진 게임과 EA Play가 기다립니다. 단 1000원으로 첫 달을 이용하세요. 신규 구독자만 사용할 수 있는 혜택입니다.',
+                  '100개 이상의 멋진 게임과 EA Play가 기다립니다. 단 1000원으로\n첫 달을 이용하세요. 신규 구독자만 사용할 수 있는 혜택입니다.',
               buttonText: '지금 가입하기 ',
               whiteMode: true),
           SizedBox(

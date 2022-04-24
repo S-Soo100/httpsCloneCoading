@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:responsive_http_clone/screen/mobile_screen.dart';
+import 'package:responsive_http_clone/screen/tablet_screen.dart';
 import 'package:responsive_http_clone/screen/web_screen.dart';
 
 void main() {
@@ -20,19 +21,12 @@ class MyApp extends StatelessWidget {
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       home: ScreenTypeLayout(
         mobile: MobileScreen(),
-        // tablet: TabletScreen(),
+        tablet: TabletScreen(),
         desktop: WebScreen(),
       ),
     );
   }
 }
-
-
-
-
-
-
-
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -50,8 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(
-        ),
+        child: Column(),
       ),
     );
   }

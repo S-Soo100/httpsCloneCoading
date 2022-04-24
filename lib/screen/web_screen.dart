@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_http_clone/widget/banner_image_widget.dart';
 import 'package:responsive_http_clone/widget/footer_list_widget.dart';
+import 'package:responsive_http_clone/widget/res_footer_widget.dart';
 import 'package:responsive_http_clone/widget/sub_menu_box_widget.dart';
-import 'package:responsive_http_clone/widget/web_header_widget.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:responsive_http_clone/widget/res_header_widget.dart';
 
 class WebScreen extends StatelessWidget {
   WebScreen({Key? key}) : super(key: key);
@@ -13,7 +13,7 @@ class WebScreen extends StatelessWidget {
   Widget _webPadding({Color? color}) {
     return Flexible(
         child: Container(
-      color: Colors.red,
+      color: color,
     ));
   }
 
@@ -41,9 +41,10 @@ class WebScreen extends StatelessWidget {
                     children: [
                       Container(
                         height: 54,
-                        child: WebHeader(),
+                        child: WebHeader(width: webWidthWidget()),
                       ),
                       BannerImageWidget(
+                          multibanner: true,
                           title: 'Microsoft 365',
                           dialog:
                               '하나의 편리한 구독으로 프리미엄 Office 앱, 추가\n클라우드 저장소, 고급 보안 등을 얻을 수 있습니다.',
@@ -142,7 +143,7 @@ class WebScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            subMenuBoxWidget(
+                            SubMenuBoxWidget(
                                 image:
                                     'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWAshJ?ver=1e8d&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true',
                                 title: 'Surface Laptop 4',
@@ -154,7 +155,7 @@ class WebScreen extends StatelessWidget {
                             SizedBox(
                               width: 20,
                             ),
-                            subMenuBoxWidget(
+                            SubMenuBoxWidget(
                                 image:
                                     'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWKCAh?ver=8ec7&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true',
                                 title: 'Surface Laptop Studio',
@@ -162,11 +163,11 @@ class WebScreen extends StatelessWidget {
                                     '최고의 성능을 제공하는 Surface Laptop\n으로 창의력을 마음껏 발휘하세요. 이제\nWindows 11과 함께 제공됩니다.',
                                 width: (webWidthWidget() / 4),
                                 buttonText: '지금 쇼핑하기',
-                                isNew: false),
+                                isNew: true),
                             SizedBox(
                               width: 20,
                             ),
-                            subMenuBoxWidget(
+                            SubMenuBoxWidget(
                                 image:
                                     'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4rzE2?ver=aa0b&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true',
                                 title: 'Microsoft Edge',
@@ -178,7 +179,7 @@ class WebScreen extends StatelessWidget {
                             SizedBox(
                               width: 20,
                             ),
-                            subMenuBoxWidget(
+                            SubMenuBoxWidget(
                                 image:
                                     'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REGxSz?ver=5bf8&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true',
                                 title: 'OneNote',
@@ -193,6 +194,7 @@ class WebScreen extends StatelessWidget {
                         height: 72,
                       ),
                       BannerImageWidget(
+                          multibanner: false,
                           width: webWidthWidget(),
                           image:
                               'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4RBHW?ver=a523&q=0&m=8&h=600&w=1600&b=%23FFFFFFFF&l=f&x=0&y=0&s=1898&d=712&aim=true',
@@ -222,7 +224,7 @@ class WebScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            subMenuBoxWidget(
+                            SubMenuBoxWidget(
                                 image:
                                     'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWKtKJ?ver=2e57&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true',
                                 title: '기업용 Surface Pro 8',
@@ -234,7 +236,7 @@ class WebScreen extends StatelessWidget {
                             SizedBox(
                               width: 20,
                             ),
-                            subMenuBoxWidget(
+                            SubMenuBoxWidget(
                                 image:
                                     'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWLJ3u?ver=7dcf&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&x=755&y=404&aim=true',
                                 title: '무료 Microsoft Teams 받기',
@@ -246,7 +248,7 @@ class WebScreen extends StatelessWidget {
                             SizedBox(
                               width: 20,
                             ),
-                            subMenuBoxWidget(
+                            SubMenuBoxWidget(
                                 image:
                                     'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4E4rT?ver=2072&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true',
                                 title: '비즈니스용 Microsoft 365',
@@ -258,7 +260,7 @@ class WebScreen extends StatelessWidget {
                             SizedBox(
                               width: 20,
                             ),
-                            subMenuBoxWidget(
+                            SubMenuBoxWidget(
                                 image:
                                     'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REGxSz?ver=5bf8&q=90&m=6&h=201&w=358&b=%23FFFFFFFF&l=f&o=t&aim=true',
                                 title: '비즈니스용 Windows 11 출시',
@@ -274,10 +276,25 @@ class WebScreen extends StatelessWidget {
                         alignment: AlignmentDirectional.centerStart,
                         height: 150,
                         child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text('Microsof 팔로우'),
-                            SvgPicture.asset(
-                                'responsive_http_clone\assets\facebook.svg')
+                            SizedBox(
+                              width: 16,
+                            ),
+                            Container(
+                              color: Colors.blue,
+                              width: 32,
+                              height: 32,
+                            ),
+                            SizedBox(
+                              width: 12,
+                            ),
+                            Container(
+                              color: Colors.blue,
+                              width: 32,
+                              height: 32,
+                            ),
                           ],
                         ),
                       )
@@ -296,11 +313,11 @@ class WebScreen extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.only(top: 40),
                     width: webWidthWidget(),
-                    height: 600,
+                    height: 360,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        FooterListWidget(list: [
+                        FooterListWidget(list: const [
                           '새로운 기능',
                           'Microsoft 365',
                           'Surface Pro X',
@@ -309,7 +326,7 @@ class WebScreen extends StatelessWidget {
                           'Surface Go',
                           'Windows 11 앱(238K)'
                         ]),
-                        FooterListWidget(list: [
+                        FooterListWidget(list: const [
                           'Microsoft Store	',
                           '계정 프로필	',
                           '다운로드 센터	',
@@ -317,7 +334,7 @@ class WebScreen extends StatelessWidget {
                           '반품/환불	',
                           '주문 추적	',
                         ]),
-                        FooterListWidget(list: [
+                        FooterListWidget(list: const [
                           '교육	',
                           'Microsoft Education	',
                           '교육용 장치	',
@@ -328,7 +345,7 @@ class WebScreen extends StatelessWidget {
                           '학생 및 학부모용 특가 혜택	',
                           'Azure for students	',
                         ]),
-                        FooterListWidget(list: [
+                        FooterListWidget(list: const [
                           '기업 고객	',
                           'Microsoft Cloud	',
                           'Microsoft Security	',
@@ -339,7 +356,7 @@ class WebScreen extends StatelessWidget {
                           'Microsoft Industry	',
                           'Microsoft Teams	',
                         ]),
-                        FooterListWidget(list: [
+                        FooterListWidget(list: const [
                           '개발자 및 IT	',
                           '개발자 센터	',
                           '설명서	',
@@ -350,7 +367,7 @@ class WebScreen extends StatelessWidget {
                           'Microsoft Power Platform	',
                           'Visual Studio	',
                         ]),
-                        FooterListWidget(list: [
+                        FooterListWidget(list: const [
                           '회사	',
                           '채용 정보	',
                           'Microsoft 정보	',
@@ -365,6 +382,10 @@ class WebScreen extends StatelessWidget {
                   _webPadding()
                 ],
               ),
+            ),
+            ResFooterWidget(
+              resWidth: resWidth,
+              width: webWidthWidget(),
             )
           ],
         ),

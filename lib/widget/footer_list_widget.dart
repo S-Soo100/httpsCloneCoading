@@ -13,7 +13,7 @@ class FooterListWidget extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             return Container(
               alignment: Alignment.centerLeft,
-              height: 34,
+              height: 30,
               width: 200,
               child: Text(
                 '${list[index]}',

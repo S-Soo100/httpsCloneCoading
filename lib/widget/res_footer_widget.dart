@@ -41,7 +41,10 @@ class ResFooterWidget extends StatelessWidget {
                   ),
                   Container(
                     padding: EdgeInsets.only(right: 20),
-                    child: Text(' 개인정보처리방침 및 위치정보이용약관'),
+                    child: Text(
+                      ' 개인정보처리방침 및 위치정보이용약관',
+                      style: TextStyle(fontWeight: FontWeight.w600),
+                    ),
                   ),
                   Container(
                     padding: EdgeInsets.only(right: 20),
@@ -99,7 +102,7 @@ class ResFooterWidget extends StatelessWidget {
                   padding: EdgeInsets.only(right: 12),
                   child: Text(
                     ' 개인정보처리방침 및 위치정보이용약관',
-                    style: TextStyle(fontSize: 12),
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
                   ),
                 ),
                 Container(
@@ -172,7 +175,7 @@ class ResFooterWidget extends StatelessWidget {
                 padding: EdgeInsets.only(right: 12),
                 child: Text(
                   ' 개인정보처리방침 및 위치정보이용약관',
-                  style: TextStyle(fontSize: 12),
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
                 ),
               ),
               Container(
